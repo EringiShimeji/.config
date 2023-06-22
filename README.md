@@ -3,6 +3,8 @@
 
 ![neovim](./images/neovim.jpeg)
 
+![neovim](./images/neovim.jpeg)
+
 This is Neovim-Config Repository for my personal use.  
 (Since 2023/3/9~)
 
