@@ -44,17 +44,17 @@
 
 -- vim.cmd('colorscheme rose-pine')
 
-vim.cmd([[
-
-let g:everforest_enable_italic = 1
-let g:everforest_disable_italic_comment = 1 
-let g:everforest_background = 'dark'
-let g:everforest_diagnostic_text_highlight = 0
-let g:everforest_better_performance = 1
-let g:everforest_transparent_background = 1
-colorscheme everforest
-
-]])
+-- vim.cmd([[
+-- 
+-- let g:everforest_enable_italic = 1
+-- let g:everforest_disable_italic_comment = 1 
+-- let g:everforest_background = 'dark'
+-- let g:everforest_diagnostic_text_highlight = 0
+-- let g:everforest_better_performance = 1
+-- let g:everforest_transparent_background = 1
+-- colorscheme everforest
+-- 
+-- ]])
 
 -- require 'nordic' .setup {
 --     -- Available themes: 'nordic', 'onedark'.
@@ -107,3 +107,12 @@ colorscheme everforest
 --     },
 -- }
 -- vim.cmd.colorscheme 'nordic'
+
+-- vim.cmd("colorscheme kanagawa")
+vim.cmd("colorscheme sonokai")
+-- vim.cmd('colorscheme edge')
+
+-- material.nvim
+-- vim.g.material_style = 'deep ocean'
+-- vim.cmd('colorscheme material')
+

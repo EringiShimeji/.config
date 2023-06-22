@@ -53,9 +53,9 @@ vim.keymap.set('n', '<leader>b',
 
 ---- Telescope-coc
 --定義ジャンプ
-vim.keymap.set("n", "gd", "<cmd>Telescope coc definitions<cr>", { noremap = true, silent = true })
+-- vim.keymap.set("n", "gd", "<cmd>Telescope coc definitions<cr>", { noremap = true, silent = true })
 -- 型定義ジャンプ
-vim.keymap.set("n", "gy", "<cmd>Telescope coc type_definitions<cr>", { noremap = true, silent = true })
+-- vim.keymap.set("n", "gy", "<cmd>Telescope coc type_definitions<cr>", { noremap = true, silent = true })
 -- diagnostics
 vim.keymap.set("n", "<leader>a", "<cmd>Telescope coc diagnostics<cr>", {noremap = true, silent = true })
 --頻度検索

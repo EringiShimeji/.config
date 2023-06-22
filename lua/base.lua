@@ -9,6 +9,7 @@ vim.wo.number = true
 vim.wo.relativenumber = false
 vim.opt.mouse = 'a'
 vim.opt.title = true
+vim.opt.expandtab = true
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 vim.opt.hlsearch = true
@@ -16,17 +17,16 @@ vim.opt.backup = false
 vim.opt.showcmd = true
 vim.opt.cmdheight = 2
 vim.opt.laststatus = 2
-vim.opt.expandtab = true
 vim.opt.scrolloff = 10
-vim.opt.shell = 'fish'
+vim.opt.shell = 'zsh'
 vim.opt.inccommand = 'split'
-vim.opt.ignorecase = true 
+vim.opt.ignorecase = true
 vim.opt.smarttab = true
 vim.opt.breakindent = true
-vim.opt.shiftwidth = 2
-vim.opt.tabstop = 2
-vim.opt.wrap = true 
-vim.opt.helplang = 'ja','en'
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
+vim.opt.wrap = true
+vim.opt.helplang = 'en'
 vim.opt.updatetime = 300
 vim.opt.showtabline = 1 -- barbar.nvimを用いる場合、値を1に設定しておかないと起動時に一瞬空のBufferがちらつく
 vim.opt.clipboard = 'unnamedplus'
@@ -64,9 +64,24 @@ keymap.set('', 'sj', '<C-w>j')
 keymap.set('', 'sl', '<C-w>l')
 
 -- Emacs風
-keymap.set('i', '<C-f>', '<Right>')
+-- keymap.set('i', '<C-f>', '<Right>')
 -- jjでEscする
-keymap.set('i','jj','<Esc>')
+keymap.set('i','jk','<Esc>')
 
 -- 設定ファイルを開く
 keymap.set('n','<F1>',':edit $MYVIMRC<CR>')
+
+vim.cmd("language en_US")
+
+-- :と;を入れ替える
+keymap.set('n',';',':')
+keymap.set('n',':',';')
+keymap.set('v',';',':')
+keymap.set('v',':',';')
+
+-- <ESC>でターミナルモードを抜ける
+keymap.set('t','<ESC>','<C-\\><C-n>')
+
+-- 常にインサートモードでターミナルを開く
+vim.cmd('autocmd TermOpen * startinsert')
+

@@ -20,9 +20,11 @@ packer.startup(function(use)
   use { "catppuccin/nvim", as = "catppuccin" }
   use 'ishan9299/nvim-solarized-lua'
   use 'rose-pine/neovim'
-  use 'sainnhe/everforest'
   use 'AlexvZyl/nordic.nvim'
   use 'folke/lsp-colors.nvim'
+  use 'sainnhe/sonokai'
+  use 'sainnhe/edge'
+  use 'marko-cerovac/material.nvim'
 
   -- dashboard
   use {
@@ -108,4 +110,13 @@ packer.startup(function(use)
       tag = '*',
   }
 
+  use 'BurntSushi/ripgrep'
+  use 'rcarriga/nvim-notify'
+  use 'petertriho/nvim-scrollbar'
+
+  -- Github Copilot
+  -- use 'github/copilot.vim'
+
+  -- 42
+  use 'hardyrafael17/norminette42.nvim'
 end)

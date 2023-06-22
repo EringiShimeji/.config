@@ -23,7 +23,7 @@ augroup END
 
 ]])
 
-vim.keymap.set('n','<C-n>',':Fern . -reveal=%<CR>',{silent = true,noremap = true})
+vim.keymap.set('n','<C-n>',':Fern . -drawer -toggle<CR>',{silent = true,noremap = true})
 
 -- 下記の記述はtrash-cliを用いない場合にファイル等を削除する方法
 -- ただし内部的には $ rm のため、原則使わない

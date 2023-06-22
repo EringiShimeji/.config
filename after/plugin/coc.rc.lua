@@ -24,7 +24,7 @@ end
 -- Use Tab for trigger completion with characters ahead and navigate
 local opts = { silent = true, noremap = true, expr = true, replace_keycodes = false }
 
-keyset("i", "<TAB>", 'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<TAB>" : coc#refresh()', opts)
+keyset("i", "<TAB>", 'coc#pum#visible() ? coc#pum#next(1) : "<C-v><TAB>"', opts)
 keyset("i", "<S-TAB>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], opts)
 
 -- Make <CR> to accept selected completion item or notify coc.nvim to format
@@ -38,11 +38,10 @@ keyset("i", "<c-space>", "coc#refresh()", { silent = true, expr = true })
 
 
 -- GoTo code navigation
--- 現在はtelescope-cocで代替
--- keyset("n", "gd", "<Plug>(coc-definition)", {silent = true})
--- keyset("n", "gy", "<Plug>(coc-type-definition)", {silent = true})
--- keyset("n", "gi", "<Plug>(coc-implementation)", {silent = true})
--- keyset("n", "gr", "<Plug>(coc-references)", {silent = true})
+keyset("n", "gd", "<Plug>(coc-definition)", {silent = true})
+keyset("n", "gy", "<Plug>(coc-type-definition)", {silent = true})
+keyset("n", "gi", "<Plug>(coc-implementation)", {silent = true})
+keyset("n", "gr", "<Plug>(coc-references)", {silent = true})
 
 
 -- Use K to show documentation in preview window
@@ -135,4 +134,4 @@ keyset("n", "<leader>nn", ":Format<cr>", { silent = true })
 
 
 -- Daily Use Coc-Extensions
- vim.g.coc_global_extensions = {'coc-html','coc-emmet','coc-json','coc-css','coc-yaml','coc-yank','coc-vimlsp','coc-tsserver','coc-eslint','coc-rust-analyzer','coc-lua','@yaegassy/coc-tailwindcss3','@yaegassy/coc-astro','coc-clangd'}
+ vim.g.coc_global_extensions = {'coc-lua','coc-clangd'}

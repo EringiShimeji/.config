@@ -3,7 +3,7 @@ if (not status) then return end
 
 require('lualine').setup {
   options = {
-    theme = 'everforest',
+    theme = 'sonokai',
   },
   sections = {
     lualine_a = {'mode'},
